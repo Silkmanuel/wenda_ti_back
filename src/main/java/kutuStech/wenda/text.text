@@ -1,0 +1,26 @@
+// domain
+-- modelo puro
+-- repositorio modelo (puro)
+
+// adapters
+----outbound
+---- entidades
+-- jpa entidades
+---- repositorio
+-- jpa repository abstract
+-- jpa repositorio implements repository (domain) e usa instancia de mappers e jpaRepository
+
+
+// aplication
+---- use case
+-- use case abstração
+---- service
+-- service que implementa usecases e usa mappers, repositorio (adapter)
+
+
+// adapters
+---inbound
+-- controller (endPoints)
+
+// infrastructure
+-- implementa abstração criadas em adapters (outbound)
